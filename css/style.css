@@ -1,0 +1,344 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1;
+}
+
+* {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.main {
+  background: #303d46;
+}
+
+.img {
+  display: block;
+  width: 100%;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.342);
+  z-index: 3;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes wave {
+  0% {
+    color: transparent;
+  }
+  50% {
+    color: #0984e3;
+  }
+  100% {
+    color: transparent;
+  }
+}
+.header {
+  padding-top: 5rem;
+  width: 100%;
+  min-height: 100vh;
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  color: #ffff;
+  background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0.3), rgba(0, 0, 255, 0.3)), url("../image/background_header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header-logo {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.header-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.header-menu-list {
+  display: flex;
+}
+@media screen and (min-width: 1025px) {
+  .header .header-bars {
+    display: none;
+  }
+  .header-menu-item:not(:first-child) {
+    margin-left: 4rem;
+  }
+  .header-menu-link {
+    color: white;
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+    border-bottom: 4px solid transparent;
+    transition: all 0.25s linear;
+  }
+  .header-menu-link:hover {
+    border-bottom-color: orangered;
+  }
+}
+
+.header-body {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header-body-title {
+  margin-top: 10rem;
+  font-size: 10rem;
+  font-family: "Pacifico", cursive;
+  position: relative;
+  color: transparent;
+  -webkit-text-stroke: 1px #0984e3;
+  animation: wave 3s linear infinite;
+}
+.header-body-desc {
+  margin-top: 5rem;
+  font-style: italic;
+  position: relative;
+}
+.header-body-desc::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: orangered;
+}
+.header-body-link {
+  margin-top: 7rem;
+  color: white;
+  font-weight: bold;
+  padding: 3rem;
+  background-color: transparent;
+  border-radius: 50px;
+  border: 4px solid orangered;
+  transition: all 0.25s linear;
+}
+.header-body-link:hover {
+  background-color: orangered;
+  transform: scale(1.1);
+  box-shadow: 0 10px 10px 0 #c93600;
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    padding-top: 2.5rem;
+    min-height: 50vh;
+  }
+  .header-body-title {
+    margin-top: 5rem;
+    font-size: 4rem;
+  }
+  .header-body-desc {
+    font-size: 1.5rem;
+  }
+  .header-body-link {
+    margin-top: 5rem;
+  }
+  .header-logo {
+    display: none;
+  }
+  .header-menu-list {
+    transform: translateX(100%);
+    padding: 2rem;
+    position: fixed;
+    background: #ffff;
+    width: 80%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    display: block;
+    transition: all 0.25s ease-in;
+  }
+  .header-menu-list.is-expand {
+    transform: translateX(0);
+  }
+  .header-menu-link {
+    color: black;
+    display: block;
+    font-size: 2.3rem;
+    font-weight: bold;
+    padding: 2rem;
+  }
+  .header-menu-link:hover {
+    background: orangered;
+    color: #ffff;
+  }
+  .header .header-bars {
+    margin-left: auto;
+    padding-right: 2rem;
+    font-size: 2.5rem;
+  }
+}
+
+.about {
+  min-height: 100vh;
+}
+.about-cv-header {
+  padding: 3rem;
+  min-height: 20rem;
+  background: #17ccba;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.about-cv-image {
+  width: 11rem;
+  height: 14.5rem;
+}
+.about-cv-image img {
+  height: 100%;
+  object-fit: cover;
+}
+.about-cv-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Arimo", sans-serif;
+  color: #ffff;
+}
+.about-cv-content-name {
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+.about-cv-content-text {
+  font-size: 1.8rem;
+}
+.about-cv-content-icon {
+  font-size: 2rem;
+  margin-right: 1.5rem;
+}
+.about-cv-summary {
+  text-align: justify;
+  background: #ffff;
+  padding: 3rem;
+  line-height: 1.4;
+}
+.about-cv-summary-title {
+  font-size: 3rem;
+  color: #17ccba;
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #ccc;
+}
+.about-cv-summary-content {
+  font-family: "Arimo", sans-serif;
+  font-size: 2rem;
+  padding-top: 1rem;
+  color: #4b4b4b;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 767px) {
+  .about-cv-header {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .about-cv-header, .about-cv-summary {
+    padding: 2rem;
+  }
+  .about-cv-summary {
+    text-align: left;
+  }
+  .about-cv-content {
+    margin-top: 3rem;
+    text-align: center;
+    min-height: 15rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .skill {
+    margin-bottom: 3rem;
+    background: #ffff;
+  }
+  .skill-title {
+    margin-top: 3rem;
+    padding-top: 3rem;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "Arimo", sans-serif;
+    color: #17ccba;
+  }
+  .skill-menu-list {
+    margin-top: 3rem;
+    background: #ffff;
+  }
+  .skill-item-image {
+    width: 30rem;
+    height: 15rem;
+  }
+  .skill-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+  }
+  .skill-item-title {
+    padding-top: 1rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .skill-item {
+    display: inline-block;
+  }
+
+  .skill-menu-list {
+    display: grid;
+    grid-auto-columns: 80%;
+    grid-auto-flow: column;
+    grid-template-columns: unset;
+    grid-row-gap: 2.5rem;
+    padding: 1rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+  }
+
+  .skill-item {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

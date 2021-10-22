@@ -1,0 +1,53 @@
+@include maxWidth(767px) {
+  .skill {
+    margin-bottom: 3rem;
+    background: $white-color;
+    &-title {
+      margin-top: 3rem;
+      padding-top: 3rem;
+      font-size: 3rem;
+      text-align: center;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-family: $second-font;
+      color: $second-color;
+    }
+    &-menu-list {
+      margin-top: 3rem;
+      background: $white-color;
+    }
+    &-item-image {
+      width: 30rem;
+      height: 15rem;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: left;
+      }
+    }
+    &-item-title {
+      padding-top: 1rem;
+      font-size: 2rem;
+      text-align: center;
+    }
+    &-item {
+      display: inline-block;
+    }
+  }
+  .skill-menu-list {
+    display: grid;
+    grid-auto-columns: 80%;
+    grid-auto-flow: column;
+    grid-template-columns: unset;
+    grid-row-gap: 2.5rem;
+    padding: 1rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+  }
+  .skill-item {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+}

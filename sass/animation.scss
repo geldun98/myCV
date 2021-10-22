@@ -1,0 +1,11 @@
+@keyframes wave {
+  0% {
+    color: transparent;
+  }
+  50% {
+    color: $blue-color;
+  }
+  100% {
+    color: transparent;
+  }
+}
