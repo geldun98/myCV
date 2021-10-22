@@ -1,3 +1,80 @@
+@include minWidth(768px) {
+  // display: none;
+  .skill {
+    background: $white-color;
+
+    &-title {
+      margin-top: 3rem;
+      padding-top: 3rem;
+      font-size: 3rem;
+      text-align: center;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-family: $second-font;
+      color: $second-color;
+    }
+    &-item {
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: space-between;
+      // height: 25rem;
+      height: 28rem;
+      border: 1rem solid $primary-color;
+      margin: 3rem;
+      background: $primary-color;
+      border-radius: 1rem;
+      &-title {
+        color: white;
+      }
+    }
+    &-item-image {
+      height: 20rem;
+      // display: flex;
+      // // flex-direction: column;
+      // // align-content: center;
+      // // justify-content: space-between;
+    }
+    &-item:nth-child(1) {
+      width: 60%;
+    }
+    &-item:nth-child(2) {
+      width: 20%;
+    }
+    &-item:nth-child(3) {
+      width: 25%;
+    }
+    &-item:nth-child(4) {
+      width: 25%;
+    }
+    &-item:nth-child(5) {
+      width: 25%;
+    }
+    &-item:nth-child(6) {
+      width: 25%;
+    }
+    &-item:nth-child(7) {
+      width: 25%;
+    }
+    &-item:nth-child(8) {
+      width: 25%;
+    }
+
+    &-menu-list {
+      margin-top: 3rem;
+      // align-content: stretch;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &-item-title {
+      padding-top: 2rem;
+      font-size: 3rem;
+      text-align: center;
+    }
+  }
+}
+
 @include maxWidth(767px) {
   .skill {
     margin-bottom: 3rem;
@@ -11,10 +88,6 @@
       text-transform: uppercase;
       font-family: $second-font;
       color: $second-color;
-    }
-    &-menu-list {
-      margin-top: 3rem;
-      background: $white-color;
     }
     &-item-image {
       width: 30rem;
@@ -32,7 +105,9 @@
       text-align: center;
     }
     &-item {
+      margin-top: 3rem;
       display: inline-block;
+      margin-bottom: 4rem;
     }
   }
   .skill-menu-list {
@@ -41,10 +116,13 @@
     grid-auto-flow: column;
     grid-template-columns: unset;
     grid-row-gap: 2.5rem;
-    padding: 1rem;
+    // padding: 1rem;
     overflow-x: scroll;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
+  }
+  .skill-item-image {
+    padding: 1rem;
   }
   .skill-item {
     scroll-snap-align: start;

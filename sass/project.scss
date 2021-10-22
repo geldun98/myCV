@@ -1,0 +1,77 @@
+.project {
+  background: $light-white;
+  padding-bottom: 3rem;
+
+  margin-top: 3rem;
+  padding-top: 3rem;
+  &-title {
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-size: $second-font;
+    color: $second-color;
+    font-weight: bold;
+  }
+  &-item {
+    background: $white-color;
+    margin: 3rem;
+    width: 30%;
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    border: solid 1rem $orange-color;
+
+    &-show {
+      width: 100%;
+      height: 25.4rem;
+      background: red;
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+    &-title {
+      margin-top: 1rem;
+      font-size: 2.5rem;
+      text-align: center;
+      font-weight: bold;
+      font-family: $special-font;
+    }
+    &-desc {
+      margin-top: 2rem;
+      color: $gray-color;
+      line-height: 1.4;
+      span {
+        font-weight: bold;
+      }
+      font-size: 2rem;
+    }
+    &-try {
+      padding-bottom: 3rem;
+      text-align: center;
+    }
+    &-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  //responsvie
+  @include maxWidth(767px) {
+    &-item {
+      width: 80%;
+    }
+  }
+}
+
+.btn-link {
+  color: $white-color;
+  font-size: 3rem;
+  background: $blue-color;
+  padding: 1rem 4rem;
+}
