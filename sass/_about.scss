@@ -1,0 +1,148 @@
+.about {
+  margin-bottom: 5rem;
+  &-title {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &-name {
+    font-size: 2.4rem;
+  }
+  &-person-infor {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &-skill {
+    width: calc((100% / 2) - 1rem);
+  }
+  &-infor {
+    width: calc((100% / 2) - 1rem);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &-item {
+      display: inline-block;
+      width: calc((100% / 2) - 1.5rem);
+      margin-top: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #ccc;
+      span {
+        color: $text-title-color;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &-education {
+    margin-top: 5rem;
+    &-content {
+      margin-top: 2rem;
+    }
+    &-title {
+      font-size: 2.4rem;
+    }
+    &-item {
+      overflow: hidden;
+      position: relative;
+      background-color: $white-color;
+      width: 50%;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      padding-left: 5rem;
+      padding-right: 2rem;
+
+      border-radius: 1rem;
+    }
+  }
+  //responsive
+
+  @include maxWidth(767px) {
+    &-name {
+      font-size: 1.6rem;
+    }
+
+    &-skill {
+      width: 100%;
+    }
+    &-infor {
+      width: 100%;
+      &-item {
+        width: 100%;
+      }
+    }
+    &-education {
+      &-item {
+        width: 100%;
+      }
+    }
+  }
+}
+.skill-item {
+  text-transform: uppercase;
+  margin-top: 2rem;
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-name {
+    font-weight: 700;
+    color: $text-title-color;
+  }
+  &-progress {
+    width: 100%;
+    height: 0.8rem;
+    background-color: $dark-gray-color;
+    position: relative;
+    border-radius: 1rem;
+  }
+  &-bars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: $red-color;
+    border-radius: 1rem;
+  }
+}
+.education-item {
+  &-time {
+    i {
+      font-size: 1.8rem;
+      color: $text-main-color;
+      margin-right: 2rem;
+    }
+    span {
+      color: $text-main-color;
+      font-weight: 600;
+      font-size: 1.8rem;
+    }
+  }
+  &-title {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+  }
+}
+.time-line {
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  background-color: $red-color;
+  top: 3rem;
+  left: 2.5rem;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    background-color: $red-color;
+    top: 0;
+    left: 1px;
+    transform: translateX(-50%);
+  }
+}

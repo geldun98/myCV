@@ -1,0 +1,23 @@
+.title-intro {
+  display: inline-block;
+  font-size: 4rem;
+  font-family: $title-font;
+  color: $text-title-color;
+  font-weight: 700;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+  border-bottom: 1px solid #ccc;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -0.5px;
+    left: 0;
+
+    width: 50%;
+    height: 0.8rem;
+    transform: translate(50%, 50%);
+
+    background-color: $red-color;
+  }
+}

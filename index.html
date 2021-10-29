@@ -4,12 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Pacifico&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Link FontAwsomme -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -17,178 +13,280 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Arimo&display=swap"
-      rel="stylesheet"
-    />
-    <title>MY CV</title>
+
+    <!-- Link file css -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>My CV</title>
   </head>
   <body>
-    <div class="main">
-      <div class="check-modal"></div>
-      <header class="header" id="header">
-        <div class="container">
-          <div class="header-top">
-            <a href="index.html" class="header-logo">Geldun98</a>
-            <i class="fas fa-bars header-bars"></i>
-            <ul class="header-menu-list">
-              <li class="header-menu-item">
-                <a href="#about" class="header-menu-link">About</a>
-              </li>
-              <li class="header-menu-item">
-                <a href="#skill" class="header-menu-link">Skill</a>
-              </li>
-              <li class="header-menu-item">
-                <a href="#project" class="header-menu-link">Project</a>
-              </li>
-            </ul>
-          </div>
-          <div class="header-body">
-            <h1 class="header-body-title">I'm Lê Việt Dũng</h1>
-            <span class="header-body-desc">A Self-Taught Programmer</span>
-            <a href="#about" class="header-body-link">Learn more about me</a>
+    <i class="fas fa-bars navbar-icon"></i>
+    <nav class="navbar" id="navbar">
+      <div class="navbar-list">
+        <a href="#home" class="navbar-item active-color">
+         <i class="fas fa-home"></i>
+         <span>Home</span>
+        </a>
+        <a href="#about" class="navbar-item">
+        <i class="fas fa-user-alt"></i>
+        <span>About</span>
+        </a>
+        <a href="#project" class="navbar-item">
+        <i class="fas fa-clipboard-list"></i>
+        <span>Project</span>
+        </a>
+        <a href="#contact" class="navbar-item">
+         <i class="fas fa-comments"></i>
+         <span>Contact</span>
+        </a>
+      </div>
+    </nav>
+    <main>
+      <section class="home" id="home">
+        <div class="home-box container">
+          <div class="home-content">
+            <div class="home-avatar">
+              <img src="./img/avatar.jpg" alt="" />
+            </div>
+            <div class="home-title">
+              <h1>Lê Việt Dũng</h1>
+              <p>I'm a Frontend Developer</p>
+            </div>
+            <div class="home-social">
+              <a href="" class="home-social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+
+              <a href="" class="home-social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="" class="home-social-icon">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="" class="home-social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
           </div>
         </div>
-      </header>
+      </section>
       <section class="about" id="about">
-        <div class="container">
-          <div class="about-cv">
-            <div class="about-cv-header">
-              <div class="about-cv-content">
-                <div class="about-cv-content-name">Lê Việt Dũng</div>
-                <div class="about-cv-content-job">
-                  <span class="about-cv-content-text">Frontend Internship</span>
+        <div class="about-box container">
+          <div class="about-title title-intro">About me</div>
+          <h3 class="about-name">I'm Geldun and Web Developer</h3>
+          <p class="about-desc">
+            I'm 23 years old and have graduated from university with a
+            specialization that does not related to programming by any means.
+            But I always have a passion for creating beautiful websites. So I
+            quit my job and pursued my passion for web development.
+            <br />
+
+            Learning programming is never easy, especially when you have to
+            learn it by yourself. I'm like a blind man creating a new way for
+            himself. But after six months of self-taught programming, overcome
+            many difficulties and obstacles, I have gained a little knowledge
+            and achievements.
+            <br />
+
+            Become a web developer is my dream, and I will continue to work as
+            hard as I can to achive it.
+          </p>
+          <div class="about-person-infor">
+            <div class="about-infor">
+              <p class="about-infor-item">
+                <span>Birthday:</span>
+                04 October 1998
+              </p>
+              <p class="about-infor-item">
+                <span>Address:</span>
+                Ha Noi, Viet Nam
+              </p>
+              <p class="about-infor-item">
+                <span>Phone:</span>
+                +84 345990350
+              </p>
+              <p class="about-infor-item">
+                <span>Age:</span>
+                23
+              </p>
+              <p class="about-infor-item">
+                <span>Email</span>
+                geldun98@gmail.com
+              </p>
+              <p class="about-infor-item">
+                <span>Degree:</span>
+                Degree of Engineering
+              </p>
+            </div>
+            <div class="about-skill">
+              <div class="skill-item">
+                <div class="skill-item-top">
+                  <span class="skill-item-name">HTML & CSS</span>
+                  <span class="skill-item-percent">80%</span>
                 </div>
-                <div class="about-cv-content-phone">
-                  <i class="fas fa-phone about-cv-content-icon"></i>
-                  <span class="about-cv-content-text">0345990350</span>
-                </div>
-                <div class="about-cv-content-email">
-                  <i class="far fa-envelope about-cv-content-icon"></i>
-                  <span class="about-cv-content-text">geldun98@gmail.com</span>
+                <div class="skill-item-progress">
+                  <div class="skill-item-bars" style="width: 80%"></div>
                 </div>
               </div>
-              <div class="about-cv-image">
-                <img src="./image/levietdung.png" alt="my_image" />
+
+              <div class="skill-item">
+                <div class="skill-item-top">
+                  <span class="skill-item-name">SASS/SCSS</span>
+                  <span class="skill-item-percent">80%</span>
+                </div>
+                <div class="skill-item-progress">
+                  <div class="skill-item-bars" style="width: 80%"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-item-top">
+                  <span class="skill-item-name">Javascript</span>
+                  <span class="skill-item-percent">60%</span>
+                </div>
+                <div class="skill-item-progress">
+                  <div class="skill-item-bars" style="width: 60%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-top">
+                  <span class="skill-item-name">React JS</span>
+                  <span class="skill-item-percent">50%</span>
+                </div>
+                <div class="skill-item-progress">
+                  <div class="skill-item-bars" style="width: 50%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-top">
+                  <span class="skill-item-name">TOEIC</span>
+                  <span class="skill-item-percent">700</span>
+                </div>
+                <div class="skill-item-progress">
+                  <div class="skill-item-bars" style="width: 78%"></div>
+                </div>
               </div>
             </div>
-            <div class="about-cv-summary">
-              <div class="about-cv-summary-title">Summary</div>
-              <div class="about-cv-summary-content">
-                I'm 23 years old and have graduated from university with a
-                specialization that does not related to programming by any
-                means. But I always have a passion for creating beautiful
-                websites. So I quit my job and pursued my passion for web
-                development.
-                <br />
-                <br />
-                Learning programming is never easy, especially when you have to
-                learn it by yourself. I'm like a blind man creating a new way
-                for himself. But after six months of self-taught programming,
-                overcome many difficulties and obstacles, I have gained a little
-                knowledge and achievements.
-                <br />
-                <br />
-                Become a web developer is my dream, and I will continue to work
-                as hard as I can to achive it.
-              </div>
-              <div class="about-cv-summary-title">Education</div>
-              <div class="about-cv-summary-content">
-                Control Engineering and Automation , University of Transport and
-                Communications
-                <br />
-                Kỹ thuật điều khiển và tự động hóa , Trường Đại học Giao thông
-                Vận tải
-                <br />
-                GPA: 2.86
+          </div>
+          <div class="about-education">
+            <h3 class="about-education-title">Education</h3>
+            <div class="about-education-content">
+              <div class="about-education-item">
+                <div class="time-line"></div>
+                <div class="education-item-time">
+                  <i class="far fa-calendar-alt"></i>
+                  <span>2016 - 2021</span>
+                </div>
+                <h3 class="education-item-title">
+                  Studied at University of Transport and Communications
+                </h3>
+                <p class="education-item-desc">
+                  Control Engineering and Automation
+                  <br />
+                  <span>GPA: 2.86</span>
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="skill container" id="skill">
-        <div class="skill-title">Technical Skills</div>
-        <ul class="skill-menu-list">
-          <li class="skill-item">
-            <div class="skill-item-image">
-              <img src="./image/toeic.png" alt="" />
-              <div class="skill-item-title">Toeic</div>
-            </div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-item-image">
-              <img src="./image/css.png" alt="" />
-              <div class="skill-item-title">Css</div>
-            </div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-item-image">
-              <img src="./image/html.png" alt="" />
-              <div class="skill-item-title">Html</div>
-            </div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-item-image">
-              <img src="./image/JS.png" alt="" />
-              <div class="skill-item-title">Javascript</div>
-            </div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-item-image">
-              <img src="./image/pug.png" alt="" />
-              <div class="skill-item-title">Jade/Pug</div>
-            </div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-item-image">
-              <img src="./image/sass.png" alt="" />
-              <div class="skill-item-title">Sass</div>
-            </div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-item-image">
-              <img src="./image/react.png" alt="" />
-              <div class="skill-item-title">React JS</div>
-            </div>
-          </li>
-          <li class="skill-item">
-            <div class="skill-item-image">
-              <img src="./image/github.png" alt="" />
-              <div class="skill-item-title">Github</div>
-            </div>
-          </li>
-        </ul>
-      </section>
-      <section class="project container" id="project">
-        <div class="project-title">My projects</div>
-        <div class="project-list">
-          <div class="project-item">
-            <div class="project-item-show">
-              <video playsinline autoplay muted loop>
+      <section class="project" id="project">
+        <div class="project-box container">
+          <div class="project-title title-intro">My Projects</div>
+          <ul class="project-list">
+            <a
+              href="https://geldun98.github.io/unscramble/index.html"
+              class="project-item"
+            >
+              <video playsinline="" autoplay="" muted="" loop="">
                 <source src="./video/show_project_1.mp4" type="video/mp4" />
               </video>
-            </div>
-            <div class="project-item-body">
-              <div class="project-item-content">
-                <div class="project-item-title">Unscramble Words</div>
-                <div class="project-item-desc">
-                  <span>Miêu tả:</span>
-                  Hỗ trợ luyện tập khả năng nghe tiếng Anh thông qua sắp xếp câu
-                </div>
+              <div class="project-item-infor">
+                <h3>Unscramble Words</h3>
+                <span>Just a simple project uses Javascript DOM</span>
               </div>
-              <div class="project-item-try">
-                <a
-                  href="https://geldun98.github.io/Dictation/A_picnic_by_the_river/"
-                  class="btn-link"
-                >
-                  Try
-                </a>
+            </a>
+            <a
+              href="https://geldun98.github.io/food/index.html"
+              class="project-item"
+            >
+              <video playsinline="" autoplay="" muted="" loop="">
+                <source src="./video/show_project_2.mp4" type="video/mp4" />
+              </video>
+              <div class="project-item-infor">
+                <h3>Product Landing Page</h3>
+                <span>Use HTML & SASS</span>
               </div>
-            </div>
-          </div>
+            </a>
+          </ul>
         </div>
       </section>
-    </div>
-    <script src="./main.js"></script>
+      <section class="contact" id="contact">
+        <div class="contact-box container">
+          <div class="contact-title title-intro">Contact Me</div>
+          <ul class="contact-infor">
+            <li class="contact-infor-item">
+              <i class="fas fa-phone"></i>
+              <h3>Call Me On</h3>
+              <p>+84 345990350</p>
+            </li>
+            <li class="contact-infor-item">
+              <i class="fas fa-envelope"></i>
+              <h3>Email</h3>
+              <p>geldun98@gmail.com</p>
+            </li>
+            <li class="contact-infor-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <h3>Location</h3>
+              <p>Ha Noi, Viet Nam</p>
+            </li>
+          </ul>
+          <form
+            class="contact-form"
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSf6Wgs7QSy889uNbpClBV02bW38CXL6M-SJYSCoYtolzU7PSQ/formResponse"
+            target="_self"
+            method="POST"
+          >
+            <input
+              type="text"
+              class="contact-form-name"
+              placeholder="Name"
+              name="entry.2061064876"
+              required
+            />
+            <input
+              type="email"
+              class="contact-form-email"
+              placeholder="Email"
+              name="entry.1978127312"
+              required
+            />
+            <input
+              type="input"
+              
+              class="contact-form-subject"
+              placeholder="Subject"
+              required
+              name="entry.709535199"
+            />
+            <input
+              type="input"
+              name="entry.1308192430"
+              placeholder="Your message"
+              class="contact-form-message"
+              required
+            ></input>
+
+
+
+            <input
+              type="submit"
+              class="contact-form-submit"
+              value="Send Message"
+            />
+          </form>
+        </div>
+      </section>
+    </main>
+    <script src="./js/main.js"></script>
   </body>
 </html>

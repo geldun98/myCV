@@ -1,0 +1,100 @@
+.contact {
+  &-title {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &-infor {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    &-item {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+
+      i {
+        font-size: 4rem;
+        color: $red-color;
+      }
+      h3 {
+        margin-top: 3rem;
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.8rem;
+        font-weight: 500;
+      }
+    }
+  }
+  &-form {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    input {
+      font-family: $main-font;
+      font-size: 1.8rem;
+      padding: 1.5rem 2.5rem;
+      border-radius: 3rem;
+      outline: none;
+      border: 1px solid #ccc;
+      transition: all 0.2s linear;
+      &[type="submit"] {
+        border: 0;
+      }
+      &:hover {
+        box-shadow: 0 0 10px 0 $red-color;
+      }
+    }
+
+    &-name {
+      width: calc((100% / 2) - 2rem);
+    }
+    &-email {
+      width: calc((100% / 2) - 2rem);
+    }
+    &-subject {
+      margin-top: 2.5rem;
+      width: 100%;
+    }
+    &-message {
+      margin-top: 2.5rem;
+      width: 100%;
+    }
+    &-submit {
+      background-color: $red-color;
+      margin-top: 3rem;
+      color: $white-color;
+      font-weight: 500;
+    }
+  }
+
+  //repsonsive
+  @include maxWidth(767px) {
+    &-infor {
+      flex-direction: column;
+      &-item {
+        margin-bottom: 3rem;
+        h3 {
+          margin-top: 1rem;
+        }
+      }
+    }
+    &-form {
+      &-name {
+        width: 100%;
+        margin-bottom: 3rem;
+      }
+      &-email {
+        width: 100%;
+      }
+    }
+  }
+}
+*::-webkit-input-placeholder {
+  color: $text-main-color;
+  font-weight: 500;
+}

@@ -1,0 +1,71 @@
+.project {
+  a {
+    display: inline-block;
+  }
+  margin-bottom: 5rem;
+  &-title {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &-list {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &-item {
+    box-shadow: 0 0 10px 0 black;
+    border: 1rem solid $white-color;
+    width: 52.5rem;
+    height: 35rem;
+    margin-bottom: 2rem;
+    flex-shrink: 0;
+
+    &:hover {
+      .project-item-infor {
+        transform: scale(1);
+      }
+    }
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    position: relative;
+    &-infor {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      transform: scale(0);
+      h3 {
+        color: $red-color;
+        font-size: 2.5rem;
+      }
+      span {
+        text-align: center;
+        display: inline-block;
+        color: white;
+        font-size: 2rem;
+      }
+      transition: all 0.2s linear;
+    }
+  }
+
+  //responsive
+  @include maxWidth(767px) {
+    &-item {
+      width: 100%;
+      height: 21rem;
+    }
+  }
+}
